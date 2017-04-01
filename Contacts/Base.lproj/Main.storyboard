@@ -9,35 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contact Form-->
-        <scene sceneID="xS5-w3-vtE">
-            <objects>
-                <tableViewController id="my3-fE-qOf" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tOY-Fk-J7W">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CNy-Ko-wkF">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CNy-Ko-wkF" id="X0z-px-xiE">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="my3-fE-qOf" id="pqc-SU-Q58"/>
-                            <outlet property="delegate" destination="my3-fE-qOf" id="9pO-YP-dna"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Contact Form" id="ga7-Mb-uJe"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cPC-kH-d6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="494" y="94"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="jeO-Qi-cwf">
             <objects>
@@ -51,12 +22,50 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="my3-fE-qOf" kind="relationship" relationship="rootViewController" id="LV6-1r-wLi"/>
+                        <segue destination="bRt-2s-9p8" kind="relationship" relationship="rootViewController" id="Tvl-tx-gxa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Iw-on-kKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-458" y="94"/>
+        </scene>
+        <!--Contact Form-->
+        <scene sceneID="6jy-YQ-C3k">
+            <objects>
+                <viewController id="bRt-2s-9p8" customClass="ContactFormViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y07-yb-6eB"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Zp-Xs-4qE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pte-dG-Xxv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I9W-al-fBZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.83137254901960778" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="bRt-2s-9p8" id="6en-yH-8YI"/>
+                                    <outlet property="delegate" destination="bRt-2s-9p8" id="NYZ-7J-I4W"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="I9W-al-fBZ" secondAttribute="trailing" id="CjX-5v-Eqt"/>
+                            <constraint firstItem="I9W-al-fBZ" firstAttribute="leading" secondItem="pte-dG-Xxv" secondAttribute="leading" id="XqL-pn-2mQ"/>
+                            <constraint firstItem="I9W-al-fBZ" firstAttribute="top" secondItem="y07-yb-6eB" secondAttribute="bottom" id="hRp-sx-JB2"/>
+                            <constraint firstItem="4Zp-Xs-4qE" firstAttribute="top" secondItem="I9W-al-fBZ" secondAttribute="bottom" id="sww-TW-Wz4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contact Form" id="p3j-Fh-H3t"/>
+                    <connections>
+                        <outlet property="tableView" destination="I9W-al-fBZ" id="m3w-DR-JgK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KiQ-fn-Qrw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="93"/>
         </scene>
     </scenes>
 </document>

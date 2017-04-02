@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,37 +39,66 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
-                            <outlet property="dataSource" destination="bRt-2s-9p8" id="iBT-Ev-Lju"/>
-                            <outlet property="delegate" destination="bRt-2s-9p8" id="38i-Qf-tzg"/>
+                            <outlet property="dataSource" destination="bRt-2s-9p8" id="SiB-mV-Be4"/>
+                            <outlet property="delegate" destination="bRt-2s-9p8" id="pWa-7b-HDy"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Contact Form" id="p3j-Fh-H3t"/>
                     <connections>
-                        <outlet property="tableView" destination="mP5-FL-6FH" id="Utp-CK-3n9"/>
-                        <segue destination="h44-6d-7tq" kind="presentation" identifier="ContactDetail" id="FVK-lH-2fJ"/>
+                        <outlet property="tableView" destination="mP5-FL-6FH" id="vry-vm-Qg1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KiQ-fn-Qrw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="404" y="93"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="YGN-vF-bWG">
+        <!--Title-->
+        <scene sceneID="gKP-0k-QaF">
             <objects>
-                <viewController id="h44-6d-7tq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cle-AB-PAW" customClass="ContactDetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XbP-jn-zjQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="gs2-W6-xcd"/>
+                        <viewControllerLayoutGuide type="top" id="Y12-n9-FRt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hmv-Ak-hXk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TDe-o5-1rr">
+                    <view key="view" contentMode="scaleToFill" id="EwS-lO-wxG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1vr-pg-vkE">
+                                <rect key="frame" x="19" y="28" width="337.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1vr-pg-vkE" firstAttribute="width" secondItem="EwS-lO-wxG" secondAttribute="width" multiplier="0.9" id="23F-jZ-XsE"/>
+                            <constraint firstItem="1vr-pg-vkE" firstAttribute="top" secondItem="Y12-n9-FRt" secondAttribute="bottom" constant="8" id="B2T-Ms-yxV"/>
+                            <constraint firstItem="1vr-pg-vkE" firstAttribute="centerX" secondItem="EwS-lO-wxG" secondAttribute="centerX" id="zIL-6w-Zsh"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="0U7-cP-zta">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="CRt-0k-Yva">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="Cle-AB-PAW" id="G7I-BD-Fp9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="t8o-bC-Ymw">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="Cle-AB-PAW" id="pcY-fG-Mg6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="1vr-pg-vkE" id="XbM-OC-9qG"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WB5-t8-h1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n7s-fg-f5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="92"/>
+            <point key="canvasLocation" x="1215" y="92"/>
         </scene>
     </scenes>
 </document>

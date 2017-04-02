@@ -8,6 +8,7 @@
 
 #import "ContactFormViewController.h"
 #import "ContactFormCell.h"
+#import "ContactDetailsViewController.h"
 
 @interface ContactFormViewController ()
 
@@ -34,6 +35,10 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[self tableView] reloadData];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -60,11 +65,16 @@
     return [[self dataSource] count];
 }
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:false];
     if (indexPath.row % 2 != 0) {
-        [self performSegueWithIdentifier:@"ContactDetail"
-                                  sender:self];
+        UIStoryboard *storyboard                      = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ContactDetailsViewController *contactDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"ContactDetailsViewController"];
+        contactDetailVC.title                         = [[self dataSource] objectAtIndex:[indexPath row]-1];
+        contactDetailVC.fieldValue                    = [[self dataSource] objectAtIndex:[indexPath row]];
+        contactDetailVC.fieldIndex                    = [indexPath row];
+        [[self navigationController] pushViewController:contactDetailVC
+                                               animated:true];
     }
 }
 

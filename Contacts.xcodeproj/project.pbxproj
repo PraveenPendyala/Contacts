@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		413F83191E90DCC900F86BE9 /* ContactDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413F83181E90DCC900F86BE9 /* ContactDetailsViewController.m */; };
 		416356BD1E8CC7320004EA9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 416356BC1E8CC7320004EA9C /* main.m */; };
 		416356C01E8CC7320004EA9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 416356BF1E8CC7320004EA9C /* AppDelegate.m */; };
 		416356C31E8CC7320004EA9C /* ContactFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 416356C21E8CC7320004EA9C /* ContactFormViewController.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		413F83181E90DCC900F86BE9 /* ContactDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailsViewController.m; sourceTree = "<group>"; };
+		413F831A1E90DCFB00F86BE9 /* ContactDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetailsViewController.h; sourceTree = "<group>"; };
 		416356B81E8CC7320004EA9C /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		416356BC1E8CC7320004EA9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		416356BE1E8CC7320004EA9C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				416356BF1E8CC7320004EA9C /* AppDelegate.m */,
 				416356C11E8CC7320004EA9C /* ContactFormViewController.h */,
 				416356C21E8CC7320004EA9C /* ContactFormViewController.m */,
+				413F831A1E90DCFB00F86BE9 /* ContactDetailsViewController.h */,
+				413F83181E90DCC900F86BE9 /* ContactDetailsViewController.m */,
 				416356C41E8CC7320004EA9C /* Main.storyboard */,
 				416356C71E8CC7320004EA9C /* Assets.xcassets */,
 				416356C91E8CC7320004EA9C /* LaunchScreen.storyboard */,
@@ -308,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				413F83191E90DCC900F86BE9 /* ContactDetailsViewController.m in Sources */,
 				416D43381E8F23E0009F14A1 /* HeaderView.m in Sources */,
 				416D43321E8F0F20009F14A1 /* ContactFormCell.m in Sources */,
 				416356C31E8CC7320004EA9C /* ContactFormViewController.m in Sources */,

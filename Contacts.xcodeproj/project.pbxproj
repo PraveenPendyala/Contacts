@@ -18,8 +18,8 @@
 		416356E11E8CC7320004EA9C /* ContactsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 416356E01E8CC7320004EA9C /* ContactsUITests.m */; };
 		416D432F1E8F0E71009F14A1 /* ContactFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 416D432E1E8F0E71009F14A1 /* ContactFormCell.xib */; };
 		416D43321E8F0F20009F14A1 /* ContactFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 416D43311E8F0F20009F14A1 /* ContactFormCell.m */; };
-		416D43351E8F1FE6009F14A1 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 416D43341E8F1FE6009F14A1 /* HeaderView.xib */; };
-		416D43381E8F23E0009F14A1 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 416D43371E8F23E0009F14A1 /* HeaderView.m */; };
+		416D43351E8F1FE6009F14A1 /* GenderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 416D43341E8F1FE6009F14A1 /* GenderView.xib */; };
+		416D43381E8F23E0009F14A1 /* GenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 416D43371E8F23E0009F14A1 /* GenderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +61,9 @@
 		416D432E1E8F0E71009F14A1 /* ContactFormCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactFormCell.xib; sourceTree = "<group>"; };
 		416D43301E8F0F20009F14A1 /* ContactFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactFormCell.h; sourceTree = "<group>"; };
 		416D43311E8F0F20009F14A1 /* ContactFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactFormCell.m; sourceTree = "<group>"; };
-		416D43341E8F1FE6009F14A1 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
-		416D43361E8F23E0009F14A1 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
-		416D43371E8F23E0009F14A1 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		416D43341E8F1FE6009F14A1 /* GenderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenderView.xib; sourceTree = "<group>"; };
+		416D43361E8F23E0009F14A1 /* GenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenderView.h; sourceTree = "<group>"; };
+		416D43371E8F23E0009F14A1 /* GenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,9 +170,9 @@
 		416D43331E8F1FB4009F14A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				416D43341E8F1FE6009F14A1 /* HeaderView.xib */,
-				416D43361E8F23E0009F14A1 /* HeaderView.h */,
-				416D43371E8F23E0009F14A1 /* HeaderView.m */,
+				416D43341E8F1FE6009F14A1 /* GenderView.xib */,
+				416D43361E8F23E0009F14A1 /* GenderView.h */,
+				416D43371E8F23E0009F14A1 /* GenderView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -285,7 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				416D432F1E8F0E71009F14A1 /* ContactFormCell.xib in Resources */,
-				416D43351E8F1FE6009F14A1 /* HeaderView.xib in Resources */,
+				416D43351E8F1FE6009F14A1 /* GenderView.xib in Resources */,
 				416356CB1E8CC7320004EA9C /* LaunchScreen.storyboard in Resources */,
 				416356C81E8CC7320004EA9C /* Assets.xcassets in Resources */,
 				416356C61E8CC7320004EA9C /* Main.storyboard in Resources */,
@@ -314,7 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				413F83191E90DCC900F86BE9 /* ContactDetailsViewController.m in Sources */,
-				416D43381E8F23E0009F14A1 /* HeaderView.m in Sources */,
+				416D43381E8F23E0009F14A1 /* GenderView.m in Sources */,
 				416D43321E8F0F20009F14A1 /* ContactFormCell.m in Sources */,
 				416356C31E8CC7320004EA9C /* ContactFormViewController.m in Sources */,
 				416356C01E8CC7320004EA9C /* AppDelegate.m in Sources */,

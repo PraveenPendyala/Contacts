@@ -18,8 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UINib *cellNib = [UINib nibWithNibName:@"ContactFormCell"
+    UINib *cellNib    = [UINib nibWithNibName:@"ContactFormCell"
                                     bundle:nil];
+    UINib *genderView = [UINib nibWithNibName:@"GenderView"
+                                       bundle:nil];
+    [[self tableView] registerNib:cellNib forHeaderFooterViewReuseIdentifier:@"GenderView"];
     [[self tableView] registerNib:cellNib
            forCellReuseIdentifier:@"ContactFormCell"];
     
@@ -76,6 +79,10 @@
         [[self navigationController] pushViewController:contactDetailVC
                                                animated:true];
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [indexPath row] == 7 ? 0 : 44;
 }
 
 @end

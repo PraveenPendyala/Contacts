@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		413F83191E90DCC900F86BE9 /* ContactDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413F83181E90DCC900F86BE9 /* ContactDetailsViewController.m */; };
+		415D26BC1E91BD7A009E6086 /* DoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415D26BB1E91BD7A009E6086 /* DoneView.xib */; };
+		415D26BE1E91BE7B009E6086 /* DoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 415D26BD1E91BE7B009E6086 /* DoneView.m */; };
 		416356BD1E8CC7320004EA9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 416356BC1E8CC7320004EA9C /* main.m */; };
 		416356C01E8CC7320004EA9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 416356BF1E8CC7320004EA9C /* AppDelegate.m */; };
 		416356C31E8CC7320004EA9C /* ContactFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 416356C21E8CC7320004EA9C /* ContactFormViewController.m */; };
@@ -42,6 +44,9 @@
 /* Begin PBXFileReference section */
 		413F83181E90DCC900F86BE9 /* ContactDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailsViewController.m; sourceTree = "<group>"; };
 		413F831A1E90DCFB00F86BE9 /* ContactDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetailsViewController.h; sourceTree = "<group>"; };
+		415D26BB1E91BD7A009E6086 /* DoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoneView.xib; sourceTree = "<group>"; };
+		415D26BD1E91BE7B009E6086 /* DoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoneView.m; sourceTree = "<group>"; };
+		415D26BF1E91BE96009E6086 /* DoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoneView.h; sourceTree = "<group>"; };
 		416356B81E8CC7320004EA9C /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		416356BC1E8CC7320004EA9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		416356BE1E8CC7320004EA9C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -173,6 +178,9 @@
 				416D43341E8F1FE6009F14A1 /* GenderView.xib */,
 				416D43361E8F23E0009F14A1 /* GenderView.h */,
 				416D43371E8F23E0009F14A1 /* GenderView.m */,
+				415D26BB1E91BD7A009E6086 /* DoneView.xib */,
+				415D26BF1E91BE96009E6086 /* DoneView.h */,
+				415D26BD1E91BE7B009E6086 /* DoneView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -286,6 +294,7 @@
 			files = (
 				416D432F1E8F0E71009F14A1 /* ContactFormCell.xib in Resources */,
 				416D43351E8F1FE6009F14A1 /* GenderView.xib in Resources */,
+				415D26BC1E91BD7A009E6086 /* DoneView.xib in Resources */,
 				416356CB1E8CC7320004EA9C /* LaunchScreen.storyboard in Resources */,
 				416356C81E8CC7320004EA9C /* Assets.xcassets in Resources */,
 				416356C61E8CC7320004EA9C /* Main.storyboard in Resources */,
@@ -317,6 +326,7 @@
 				416D43381E8F23E0009F14A1 /* GenderView.m in Sources */,
 				416D43321E8F0F20009F14A1 /* ContactFormCell.m in Sources */,
 				416356C31E8CC7320004EA9C /* ContactFormViewController.m in Sources */,
+				415D26BE1E91BE7B009E6086 /* DoneView.m in Sources */,
 				416356C01E8CC7320004EA9C /* AppDelegate.m in Sources */,
 				416356BD1E8CC7320004EA9C /* main.m in Sources */,
 			);

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uxT-we-57C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uxT-we-57C">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,39 +33,42 @@
         <scene sceneID="6jy-YQ-C3k">
             <objects>
                 <viewController id="bRt-2s-9p8" customClass="ContactFormViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y07-yb-6eB"/>
-                        <viewControllerLayoutGuide type="bottom" id="4Zp-Xs-4qE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pte-dG-Xxv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mP5-FL-6FH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I9W-al-fBZ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.83137254901960778" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="bRt-2s-9p8" id="6en-yH-8YI"/>
-                                    <outlet property="delegate" destination="bRt-2s-9p8" id="NYZ-7J-I4W"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="I9W-al-fBZ" secondAttribute="trailing" id="CjX-5v-Eqt"/>
-                            <constraint firstItem="I9W-al-fBZ" firstAttribute="leading" secondItem="pte-dG-Xxv" secondAttribute="leading" id="XqL-pn-2mQ"/>
-                            <constraint firstItem="I9W-al-fBZ" firstAttribute="top" secondItem="y07-yb-6eB" secondAttribute="bottom" id="hRp-sx-JB2"/>
-                            <constraint firstItem="4Zp-Xs-4qE" firstAttribute="top" secondItem="I9W-al-fBZ" secondAttribute="bottom" id="sww-TW-Wz4"/>
-                        </constraints>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="bRt-2s-9p8" id="iBT-Ev-Lju"/>
+                            <outlet property="delegate" destination="bRt-2s-9p8" id="38i-Qf-tzg"/>
+                        </connections>
+                    </tableView>
                     <navigationItem key="navigationItem" title="Contact Form" id="p3j-Fh-H3t"/>
                     <connections>
-                        <outlet property="tableView" destination="I9W-al-fBZ" id="m3w-DR-JgK"/>
+                        <outlet property="tableView" destination="mP5-FL-6FH" id="Utp-CK-3n9"/>
+                        <segue destination="h44-6d-7tq" kind="presentation" identifier="ContactDetail" id="FVK-lH-2fJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KiQ-fn-Qrw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="404" y="93"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YGN-vF-bWG">
+            <objects>
+                <viewController id="h44-6d-7tq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XbP-jn-zjQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="gs2-W6-xcd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TDe-o5-1rr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WB5-t8-h1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="92"/>
         </scene>
     </scenes>
 </document>

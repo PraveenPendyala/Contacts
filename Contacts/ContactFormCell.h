@@ -12,6 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
--(void)configure:(NSString *)text;
+-(void)configure:(NSString *)text color:(UIColor *)color;
 
 @end

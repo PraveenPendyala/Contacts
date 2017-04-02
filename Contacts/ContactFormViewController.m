@@ -8,7 +8,6 @@
 
 #import "ContactFormViewController.h"
 #import "ContactFormCell.h"
-#import "HeaderView.h"
 
 @interface ContactFormViewController ()
 
@@ -48,7 +47,12 @@
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ContactFormCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactFormCell"
                                                             forIndexPath:indexPath];
-    [cell configure:[[self dataSource] objectAtIndex:[indexPath row]]];
+    if (indexPath.row % 2 != 0) {
+    [cell configure:[[self dataSource] objectAtIndex:[indexPath row]] color:[UIColor whiteColor]];
+    }
+    else {
+    [cell configure:[[self dataSource] objectAtIndex:[indexPath row]] color:[UIColor clearColor]];
+    }
     return cell;
 }
 
@@ -58,6 +62,10 @@
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:false];
+    if (indexPath.row % 2 != 0) {
+        [self performSegueWithIdentifier:@"ContactDetail"
+                                  sender:self];
+    }
 }
 
 @end

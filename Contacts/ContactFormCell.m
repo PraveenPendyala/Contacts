@@ -10,8 +10,9 @@
 
 @implementation ContactFormCell
 
-- (void)configure:(NSString *)text {
+- (void)configure:(NSString *)text color:(UIColor *)color {
     [[self label] setText:text];
+    [[self contentView] setBackgroundColor:color];
 }
 
 @end

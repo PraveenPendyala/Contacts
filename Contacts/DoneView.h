@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DoneViewDelegate <NSObject>
+
+-(void)doneButtonPressed;
+
+@end
+
 @interface DoneView: UITableViewHeaderFooterView
+
+@property (weak, nonatomic) id <DoneViewDelegate> delegate;
 
 @end

@@ -15,10 +15,7 @@
 @implementation DoneView
 
 - (IBAction)doneButtonPressed:(id)sender {
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"Success!"
-                                                                     message:@"Form has been submitted"
-                                                              preferredStyle:UIAlertControllerStyleAlert];
-    [self navig]
+    [[self delegate] doneButtonPressed];
 }
 
 @end

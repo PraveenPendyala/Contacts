@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DoneView.h"
 
-@interface ContactFormViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ContactFormViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, DoneViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, atomic) NSMutableArray *dataSource;

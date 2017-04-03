@@ -89,7 +89,7 @@
         ContactDetailsViewController *contactDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"ContactDetailsViewController"];
         contactDetailVC.title                         = [[self dataSource] objectAtIndex:([indexPath row]-1 + [indexPath section]*8)];
         contactDetailVC.fieldValue                    = [[self dataSource] objectAtIndex:([indexPath row] + [indexPath section]*8)];
-        contactDetailVC.fieldIndex                    = [indexPath row];
+        contactDetailVC.fieldIndex                    = ([indexPath row] + [indexPath section]*8);
         [[self navigationController] pushViewController:contactDetailVC
                                                animated:true];
     }
@@ -112,8 +112,25 @@
 }
 
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return section == 2 ? [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"DoneView"] : nil;
+    DoneView *doneView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"DoneView"];
+    [doneView setDelegate:self];
+    return section == 2 ? doneView: nil;
 }
 
+// MARK: -
+// MARK: DoneViewDelegate
+
+-(void)doneButtonPressed {
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"Success!"
+                                                                     message:@"Form has been submitted"
+                                                              preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction    = [UIAlertAction actionWithTitle:@"OK"
+                                                          style:UIAlertActionStyleDefault
+                                                        handler:nil];
+    [alertVC addAction:okAction];
+    [self presentViewController:alertVC
+                       animated:true
+                     completion:nil];
+}
 
 @end

@@ -30,7 +30,6 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="IMs-Zk-1PK" secondAttribute="trailing" constant="20" id="633-ad-mm1"/>
                 <constraint firstItem="IMs-Zk-1PK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="N2M-a0-0em"/>

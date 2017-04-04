@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol GenderViewDelegate <NSObject>
+
+-(void)genderChanged:(NSString*)gender;
+
+@end
+
 @interface GenderView: UITableViewHeaderFooterView
+
+@property (weak, nonatomic) id <GenderViewDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @end

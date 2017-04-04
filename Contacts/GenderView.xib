@@ -24,6 +24,9 @@
                         <segment title="Female"/>
                     </segments>
                     <color key="tintColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="genderSelected:" destination="iN0-l3-epB" eventType="valueChanged" id="azI-bh-eis"/>
+                    </connections>
                 </segmentedControl>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNu-wj-uSD">
                     <rect key="frame" x="0.0" y="81.5" width="438" height="14.5"/>
@@ -41,6 +44,9 @@
                 <constraint firstAttribute="trailing" secondItem="cNu-wj-uSD" secondAttribute="trailing" id="oNm-nN-8b9"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="segmentedControl" destination="Nap-Pc-mbU" id="6V1-Jg-NpY"/>
+            </connections>
             <point key="canvasLocation" x="3" y="-231"/>
         </view>
     </objects>

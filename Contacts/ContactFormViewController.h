@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "DoneView.h"
+#import "GenderView.h"
 
-@interface ContactFormViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, DoneViewDelegate>
+@interface ContactFormViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, DoneViewDelegate, GenderViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, atomic) NSMutableArray *dataSource;

@@ -14,4 +14,17 @@
 
 @implementation GenderView
 
+- (IBAction)genderSelected:(id)sender {
+    switch (self.segmentedControl.selectedSegmentIndex) {
+        case 0:
+            [self.delegate genderChanged:@"Male"];
+            break;
+        case 1:
+            [self.delegate genderChanged:@"Female"];
+            break;
+        default:
+            break;
+    }
+}
+
 @end

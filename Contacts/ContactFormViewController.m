@@ -108,7 +108,9 @@
 }
 
 - (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    return section == 0 ? [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"GenderView"] : nil;
+    GenderView *genderView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"GenderView"];
+    [genderView setDelegate:self];
+    return section == 0 ?  genderView: nil;
 }
 
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -126,11 +128,30 @@
                                                               preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okAction    = [UIAlertAction actionWithTitle:@"OK"
                                                           style:UIAlertActionStyleDefault
-                                                        handler:nil];
+                                                          handler:^(UIAlertAction * _Nonnull action) {
+                                                              self.dataSource = [NSMutableArray arrayWithObjects:@"First Name",@"",
+                                                                                                                 @"Last Name" ,@"",
+                                                                                                                 @"Age"       ,@"",
+                                                                                                                 @"Gender"    ,@"",
+                                                                                                                 @"Address1"  ,@"",
+                                                                                                                 @"Address2"  ,@"",
+                                                                                                                 @"ZipCode"   ,@"",
+                                                                                                                 @"State"     ,@"",
+                                                                                                                 nil];
+                                                              [self.tableView reloadData];
+                                                          }];
     [alertVC addAction:okAction];
     [self presentViewController:alertVC
                        animated:true
                      completion:nil];
+}
+
+
+// MARK: -
+// MARK: GenderViewDelegate
+
+-(void)genderChanged:(NSString *)gender {
+    [self dataSource][7] = gender;
 }
 
 @end

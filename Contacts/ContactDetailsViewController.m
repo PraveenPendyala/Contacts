@@ -29,8 +29,9 @@
 // MARK: View Cycle
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [[self textField] setPlaceholder:[self title]];
-    [[self textField] setText:[self fieldValue]];
+    [self.textField setPlaceholder:[self title]];
+    [self.textField setText:[self fieldValue]];
+    [self.textField becomeFirstResponder];
 }
 
 @end
